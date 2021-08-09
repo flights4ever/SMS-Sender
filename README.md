@@ -12,5 +12,6 @@ API key and wallet id into the .env dotfile
 To configure correctly, ensure you have a .env in the
 /src directory with the following variables
 
+APP_ID = Application ID
 API_KEY = Application Token
 WALLET = Wallet to charge
