@@ -8,10 +8,12 @@ import os
 import requests
 from dotenv import load_dotenv
 
-def send_sms(number, content, wallet=os.environ.get('WALLET')):
-    load_env()
+def send_sms(number, content):
+    app_id, api_key, wallet = load_env()
+    url = 'https://portal.bulkgate.com/api/1.0/simple/transactional'
 
-
+    
+    
 def load_env():
     """Initialise environment variables."""
     load_dotenv()
@@ -19,8 +21,9 @@ def load_env():
     api_key = os.environ.get('API_KEY')
     wallet = os.environ.get('WALLET')
 
-    
+    return [app_id, api_key, wallet]
+
 
 if __name__ == '__main__':
-    run()
+    send_sms(473190370, "Test")
     print("Run successfully")
